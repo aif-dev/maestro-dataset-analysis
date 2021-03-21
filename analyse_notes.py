@@ -43,7 +43,7 @@ def create_chord(chords, pitch_start_time):
 if len(sys.argv) == 2:
     filename = sys.argv[1]
 else:
-    filename = "maestro-v3.0.0/2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--1.midi"
+    filename = "sample-data/maestro-v3.0.0/2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--1.midi"
 
 midi_data = pretty_midi.PrettyMIDI(filename)
 
