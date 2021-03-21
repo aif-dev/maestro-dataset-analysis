@@ -27,17 +27,14 @@ def create_chord(chords, pitch_start_time):
     '''
     chord_time_eps = 0.05
 
-    for idx in chords:
+    chords_count = len(chords)
+
+    for idx in range(chords_count):
         if abs(pitch_start_time - chords[idx]) <= chord_time_eps:
             return idx
 
-    if chords != {}:
-        new_chord_idx = list(chords.keys())[-1] + 1
-    else:
-        new_chord_idx = 0
-
-    chords[new_chord_idx] = pitch_start_time
-    return new_chord_idx
+    chords.append(pitch_start_time)
+    return chords_count
 
 
 if len(sys.argv) == 2:
@@ -56,7 +53,7 @@ print(header)
 printed_notes_limit = 12
 printed_notes_count = 0
 
-chords = {}
+chords = []
 for note in midi_data.instruments[0].notes:
     musical_note = pitch_to_note(note.pitch)
     chord_idx = create_chord(chords, note.start)
