@@ -6,4 +6,5 @@ pipenv
 
 ## How to run:
 pipenv install </br>
-python analyse_notes.py \[path/to/midi/file\]
+python analyse_notes.py \[path/to/midi/file\] </br>
+python get_min_max_pitches.py
