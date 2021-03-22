@@ -8,6 +8,9 @@ verify_ssl = true
 [packages]
 pretty-midi = "*"
 autopep8 = "*"
+matplotlib = "*"
+pandas = "*"
+statsmodels = "*"
 
 [requires]
 python_version = "3.8"
